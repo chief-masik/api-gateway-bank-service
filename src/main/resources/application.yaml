@@ -1,0 +1,24 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true   # ?????????? ??????????? ??????? ????
+      routes[0]:
+        id: lending-service-route
+        uri: lb://lending-service
+        predicates[0]: Path=/loan-controller/**
+      routes[1]:
+        id: account-service-route
+        uri: lb://front-service
+        predicates[0]: Path=/account/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+
