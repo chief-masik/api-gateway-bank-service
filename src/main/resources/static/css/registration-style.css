@@ -1,0 +1,47 @@
+:root {
+    --colorRed: #EE6A59;
+    --colorMilk: #ECE6CD;
+    --colorOrange: #F9AC67;
+    --colorSea: #3A3F58;
+    --colorOrangeV: #ED5D23;
+    --colorOrangeP: #FFA825;
+    --colorDarkPurple: #380036;
+    --colorLightBlue: #C5E4E3;
+    --colorX: #BEC7C9;
+    --colorDarkX: #A8B0B2;
+    --colorYellow: #ffe135;
+}
+
+body {
+    background: url("../svg/banana-for-the-background.svg") var(--colorYellow);
+    background-size: 2.5%;
+}
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.form-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#minion-img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.custom-margin {
+    margin-top: 4.7%;
+}
+

@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8765
 spring:
   application:
     name: api-gateway
@@ -8,11 +8,11 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true   # ?????????? ??????????? ??????? ????
+          lower-case-service-id: true
       routes[0]:
         id: lending-service-route
         uri: lb://lending-service
-        predicates[0]: Path=/loan-controller/**
+        predicates[0]: Path=/loan-service/**
       routes[1]:
         id: account-service-route
         uri: lb://front-service
@@ -20,5 +20,5 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8081/eureka
+      defaultZone: http://localhost:8761/eureka
 
